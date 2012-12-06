@@ -16,5 +16,10 @@ module Spinach
       # Factory Girl
       # @current_user ||= FactoryGirl.create(:user, password: 'test1234', password_confirmation: 'test1234')
     end
+    
+    
+    step 'I am logged in' do
+      login_as current_user
+    end
   end
 end
