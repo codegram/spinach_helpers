@@ -20,6 +20,8 @@ module Spinach
     
     step 'I am logged in' do
       login_as current_user
+      # Use this if you're using capybara-webkit and issues with login in
+      # login_as(current_user, scope: :user, run_callbacks: false)
     end
   end
 end
